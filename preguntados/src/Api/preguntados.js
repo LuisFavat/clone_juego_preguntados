@@ -14,9 +14,11 @@ const get = (url) => (
 
 const getDificulty = () => get('api/difficulty')
 
+const getQuestions = (aDificulty) => get(`/api/questions?difficulty=${aDificulty}`)
 
 const Api = {
     getDificulty,
+    getQuestions
 }
 
 export default Api;

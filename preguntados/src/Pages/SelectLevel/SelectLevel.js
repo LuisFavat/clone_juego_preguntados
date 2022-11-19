@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Api from "../../../Api/preguntados"
-import NavButton from "../../../components/Button/NavButton"
+import Api from "../../Api/preguntados"
+import NavButton from "../../components/NavButton/NavButton"
 import "./SelectLevel.css"
 
 const SelectLevel = () => {
@@ -13,9 +13,6 @@ const SelectLevel = () => {
             .then( (data) => setLevels(data))
             .catch((error) => error)
     })
-
-
-    
 
 
     return(

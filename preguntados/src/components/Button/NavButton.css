@@ -1,18 +1,13 @@
-
 .ButtonWrapper
 {
-    position: relative;
+    margin: 10px;
+    top: 50px;
 }
 
 .Button
 {
     font-size: 3vw;
-
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-
+    width: 100%;
     padding-left: 12px;
     padding-right: 12px;
     border-radius: 10px;

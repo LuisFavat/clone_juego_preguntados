@@ -1,23 +1,36 @@
+
+
+
 .HomeWrapper
 {
     text-align: center;
     height: 100vh;
 }
 
+
+
 .PreguntadosImage
 {
-    /*margin*/
+
     margin-top: 10vh;
     margin-bottom: 5vh;
 
-    /*dimensions*/
     width:25vw;
     min-width: 280px;
 }
 
+.ButtonAtHomeMetaWrapper
+{
+  position: relative;
+}
 
 .ButtonAtHomeWrapper
 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   margin-top: 8vh;
+  width: 10vw;
 }
 

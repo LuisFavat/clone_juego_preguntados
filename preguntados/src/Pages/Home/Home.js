@@ -1,4 +1,4 @@
-import Button from "../../components/Button/Button";
+import Button from "../../components/Button/NavButton";
 import preguntados from "./preguntados.webp"
 import "./Home.css"
 import { useNavigate } from "react-router-dom";
@@ -11,9 +11,11 @@ const Home = () => {
     return(
         <div className="HomeWrapper">
             <img className="PreguntadosImage" src={preguntados}/>
+            <div className="ButtonAtHomeMetaWrapper">
                 <div className="ButtonAtHomeWrapper"> 
-                    <Button action={goToSelecLevel}/>
+                    <Button action={goToSelecLevel} tag={"Start"}/>
                 </div>
+            </div>
         </div>
 )}
 

@@ -6,8 +6,11 @@ const Home = () => {
 
     return(
         <div className="HomeWrapper">
-            <img className="PreguntadosImage" src={preguntados}/>   
-            <Button className="ButtonOnHome" />
+            <img className="PreguntadosImage" src={preguntados}/>
+                <div className="ButtonAtHomeWrapper"> 
+                Press
+                    <Button />
+                </div>
         </div>
 )}
 

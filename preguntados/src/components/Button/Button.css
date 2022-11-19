@@ -6,12 +6,33 @@
 
 .Button
 {
-    
-    font-size: 8vw;
+    font-size: 3vw;
 
-    /*position*/
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
 
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 10px;
+    border: 3px solid black;
+    transition: all .7s ease;
+    background-color:rgb(255, 0, 0);
+    color: white;
+
+    cursor: pointer;
+}
+
+.Button:hover
+{
+    background-color: rgb(196, 0, 0);
+    font-size: 4vw;
+}
+
+@media screen and (max-width:780px){
+ 
+    .Button{
+        font-size: xx-large;
+    }
 }

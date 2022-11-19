@@ -3,7 +3,7 @@ import "./Button.css"
 const Button = () => {
     return(
         <div className="ButtonWrapper">Press
-            <div className="Button">Start</div>
+            <button className="Button">Start</button>
         </div>
     )
 }

@@ -1,0 +1,23 @@
+.HomeWrapper
+{
+    text-align: center;
+
+
+}
+
+.PreguntadosImage
+{
+    /*margin*/
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+
+    /*dimensions*/
+    width:30vw;
+    min-width: 280px;
+
+}
+
+.ButtonOnHome
+{
+    margin-top: 800px ;
+}

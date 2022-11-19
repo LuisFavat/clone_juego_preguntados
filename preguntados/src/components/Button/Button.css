@@ -1,0 +1,17 @@
+
+.ButtonWrapper
+{
+    position: relative;
+}
+
+.Button
+{
+    
+    font-size: 8vw;
+
+    /*position*/
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+}

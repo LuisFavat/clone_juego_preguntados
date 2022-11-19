@@ -1,9 +1,9 @@
 import "./Button.css"
 
-const Button = () => {
+const Button = ({action}) => {
     return(
         <div className="ButtonWrapper">Press
-            <button className="Button">Start</button>
+            <button className="Button" onClick={action}>Start</button>
         </div>
     )
 }

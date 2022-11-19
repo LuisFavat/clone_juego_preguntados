@@ -4,12 +4,13 @@ import "./Home.css"
 
 const Home = () => {
 
+    const goToSelecLevel = () => {console.log("FUNCIONA")}
+
     return(
         <div className="HomeWrapper">
             <img className="PreguntadosImage" src={preguntados}/>
                 <div className="ButtonAtHomeWrapper"> 
-                Press
-                    <Button />
+                    <Button action={goToSelecLevel}/>
                 </div>
         </div>
 )}

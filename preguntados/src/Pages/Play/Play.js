@@ -44,9 +44,7 @@ const Play = () => {
                     option4={ questionsLoaded.at(0)[actualQuestion].option4 }
                     />
              : <div/>}
-             <div>
-                <Button action={ submitAnswer } tag ={"Next question"}/>
-             </div>
+
         </div>
     )
 

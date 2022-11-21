@@ -3,7 +3,7 @@ import Api from "../../Api/preguntados"
 import "./Question.css"
 import Button from "../Button/Button"
 
-const Question = ({action, questionID, question, option1, option2, option3, option4}) =>
+const Question = ({submit, questionID, question, option1, option2, option3, option4}) =>
 {
    
     const [questionsState, setQuestionsState] = useState(["unCheck", "unCheck", "unCheck", "unCheck"])
@@ -30,6 +30,10 @@ const Question = ({action, questionID, question, option1, option2, option3, opti
         )
     }
 
+    const doOnClick = () => {
+        submit()
+        setQuestionsState(unCkeckState())}
+
     return(
         <div className="QuestionWrapper" >
             <div>{ question }</div>
@@ -37,6 +41,9 @@ const Question = ({action, questionID, question, option1, option2, option3, opti
             <Option style={questionsState[1]} id={2}  aOption={option2}/>
             <Option style={questionsState[2]} id={3}  aOption={option3}/>
             <Option style={questionsState[3]} id={4}  aOption={option4}/>
+            <div>
+                <Button action={ doOnClick } tag ={"Next question"}/>
+             </div>
         </div>
     )
 }

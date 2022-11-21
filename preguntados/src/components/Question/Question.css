@@ -2,3 +2,19 @@
 {
 
 }
+
+.unCheck
+{
+    background-color: bisque;
+}
+
+
+.true
+{
+    background-color: chartreuse;
+}
+
+.false
+{
+    background-color: red;
+}

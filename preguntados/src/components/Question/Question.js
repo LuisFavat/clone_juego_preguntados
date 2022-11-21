@@ -13,29 +13,38 @@ const Question = ({submit, questionID, question, option1, option2, option3, opti
     const Option = ({style, id, aOption}) => { 
 
         const sendOption = () => {
+            if(!questionsState.includes("true") && !questionsState.includes("false"))
+            {
             Api.postOption(questionID, `option${id}`)
                 .then((data) => {
                         let newState = unCkeckState()
                         newState.splice(id -1, 1, data.answer.toString())
-                        console.log("VEr el new stae", newState)
                         setQuestionsState(newState)
+                        if(newState.includes("true"))
+                        {
+                            setScore(score + 1)
+                        }
                     })
                 .catch(function (error){
                     console.log("ERROR!!!", error)
                 })            
-        }
+        }}
 
         return(
             <div className={style} onClick={sendOption}>{ aOption }</div>
         )
     }
 
+    const [score, setScore] = useState(0)
+
     const doOnClick = () => {
         submit()
-        setQuestionsState(unCkeckState())}
+        setQuestionsState(unCkeckState())
+    }
 
     return(
         <div className="QuestionWrapper" >
+            <div>Correct aswers: {score} </div>
             <div>{ question }</div>
             <Option style={questionsState[0]} id={1}  aOption={option1}/>
             <Option style={questionsState[1]} id={2}  aOption={option2}/>

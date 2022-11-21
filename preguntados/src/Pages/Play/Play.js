@@ -9,7 +9,10 @@ import Button from "../../components/Button/Button";
 
 const Play = () => {
 
+    
+
     const [questionsLoaded, setQuestionsLoaded] = useState([[],false])
+    const [endPlay, setEndPlay] = useState(false)
 
     let {dificulty} = useParams()
     console.log("a dificulty: ", dificulty)
@@ -27,8 +30,16 @@ const Play = () => {
     const navigate = useNavigate()
 
     const submitAnswer = () => {
-       setActualQuestion(actualQuestion + 1)
-       navigate(`/play/${dificulty}?question=${actualQuestion+1}`)
+        console.log("cantidad de respuestas", questionsLoaded.at(0).length, "actual", actualQuestion)
+       if(questionsLoaded.at(0).length !== actualQuestion + 1)
+       {
+            setActualQuestion(actualQuestion + 1)
+       }
+       else
+       {
+            //navigate("/end")
+       }
+
     }
 
     return(
@@ -43,7 +54,7 @@ const Play = () => {
                     option3={ questionsLoaded.at(0)[actualQuestion].option3 } 
                     option4={ questionsLoaded.at(0)[actualQuestion].option4 }
                     />
-             : <div/>}
+             : <div>Loading...</div>}
 
         </div>
     )

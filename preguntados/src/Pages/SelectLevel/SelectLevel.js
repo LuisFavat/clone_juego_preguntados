@@ -19,7 +19,7 @@ const SelectLevel = () => {
         <div className="LevelSelectButtonMetaWrapper">
             <div className="LevelSelectButtonWrapper">
             Select a difficulty
-                {levels.map(level => <NavButton key={level} url={`/play/${level}?question=1`} tag={level}/>)}
+                {levels.map(level => <NavButton key={level} url={`/play/${level}`} tag={level}/>)}
             </div>
         </div>
     )

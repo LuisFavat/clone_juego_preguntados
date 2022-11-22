@@ -9,6 +9,7 @@ const Question = ({submit, questionID, question, option1, option2, option3, opti
     const [questionsState, setQuestionsState] = useState(["unCheck", "unCheck", "unCheck", "unCheck"])
 
     const unCkeckState = () => Array(4).fill("unCheck")
+    const unSelectableState = () => Array(4).fill("unSelectable")
 
     const Option = ({style, id, aOption}) => { 
 
@@ -17,7 +18,7 @@ const Question = ({submit, questionID, question, option1, option2, option3, opti
             {
             Api.postOption(questionID, `option${id}`)
                 .then((data) => {
-                        let newState = unCkeckState()
+                        let newState = unSelectableState()
                         newState.splice(id -1, 1, data.answer.toString())
                         setQuestionsState(newState)
                         if(newState.includes("true"))

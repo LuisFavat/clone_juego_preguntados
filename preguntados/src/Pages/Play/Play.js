@@ -43,19 +43,21 @@ const Play = () => {
     }
 
     return(
-        <div className="PlayQuestionWrapper">
-            { questionsLoaded.at(1)?
-                <Question 
-                    submit={submitAnswer}
-                    questionID={ questionsLoaded.at(0)[actualQuestion].id }
-                    question={ questionsLoaded.at(0)[actualQuestion].question } 
-                    option1={ questionsLoaded.at(0)[actualQuestion].option1 } 
-                    option2={ questionsLoaded.at(0)[actualQuestion].option2 } 
-                    option3={ questionsLoaded.at(0)[actualQuestion].option3 } 
-                    option4={ questionsLoaded.at(0)[actualQuestion].option4 }
-                    />
-             : <div>Loading...</div>}
-
+        <div className="playWrapper">
+            play
+            <div className="PlayQuestionWrapper">
+                { questionsLoaded.at(1)?
+                    <Question 
+                        submit={submitAnswer}
+                        questionID={ questionsLoaded.at(0)[actualQuestion].id }
+                        question={ questionsLoaded.at(0)[actualQuestion].question } 
+                        option1={ questionsLoaded.at(0)[actualQuestion].option1 } 
+                        option2={ questionsLoaded.at(0)[actualQuestion].option2 } 
+                        option3={ questionsLoaded.at(0)[actualQuestion].option3 } 
+                        option4={ questionsLoaded.at(0)[actualQuestion].option4 }
+                        />
+                : <div>Loading...</div>}
+            </div>
         </div>
     )
 

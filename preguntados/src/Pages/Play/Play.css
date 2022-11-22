@@ -1,5 +1,16 @@
+.playWrapper
+{
+    position: relative;
+    background-color: blueviolet;
+    height: 100vh;
+}
+
 .PlayQuestionWrapper
 {
     text-align: center;
     background-color: aqua;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }

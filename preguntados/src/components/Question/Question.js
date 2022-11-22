@@ -38,8 +38,11 @@ const Question = ({submit, questionID, question, option1, option2, option3, opti
     const [score, setScore] = useState(0)
 
     const doOnClick = () => {
-        submit()
-        setQuestionsState(unCkeckState())
+        if(questionsState.includes("true") || questionsState.includes("false"))
+        {
+            submit()
+            setQuestionsState(unCkeckState())
+        }
     }
 
     return(

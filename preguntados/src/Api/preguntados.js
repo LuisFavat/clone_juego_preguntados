@@ -19,7 +19,7 @@ const getQuestions = (aDificulty) => get(`/api/questions?difficulty=${aDificulty
 const postOption = (aID, aOption) => (
     Axios.post("/api/answer",{questionId:`${aID}`, option: `${aOption}`})
         .then(({data}) => data)
-        .catch((error) => error)
+        .catch(error => Promise.reject(error.response.data))
 )
 
 const Api = {

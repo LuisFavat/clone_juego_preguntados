@@ -8,10 +8,15 @@ const SelectLevel = () => {
 
     const [levels, setLevels] = useState([])
     
+    const navigate = useNavigate()
+
     useEffect(() => {
         Api.getDificulty()
             .then( (data) => setLevels(data))
-            .catch((error) => error)
+            .catch((error) => 
+            {navigate("/error/can't access difficulty")
+            console.log(error)
+        })
     })
 
 

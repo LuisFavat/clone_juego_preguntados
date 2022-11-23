@@ -3,15 +3,13 @@ import "./Play.css"
 import Api from "../../Api/preguntados"
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import Button from "../../components/Button/Button";
-
-
 
 const Play = () => {
 
     
     //El estado es el siguiente: el indice 0 representa la lista de preguntas,
     // el indice 1 representa si se cargaron las preguntas.
+    
     const [questionsLoaded, setQuestionsLoaded] = useState([[],false])
     const [score, setScore] = useState(0)
 
@@ -26,7 +24,10 @@ const Play = () => {
             .then((data) => {
                 setQuestionsLoaded([data, true])
     })
-            .catch((error) => error)
+            .catch((error) => {
+                navigate("/error/can't access questions")
+                console.log(error)
+            })
     },[])
  
     const [actualQuestion, setActualQuestion] = useState(0)

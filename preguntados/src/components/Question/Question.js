@@ -1,10 +1,12 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import Api from "../../Api/preguntados"
 import "./Question.css"
 import Button from "../Button/Button"
+import { useNavigate } from "react-router-dom"
 
 const Question = ({toParent, submit, questionID, question, option1, option2, option3, option4}) =>
 {
+    const navigate = useNavigate()
    
     const [questionsState, setQuestionsState] = useState(["unCheck", "unCheck", "unCheck", "unCheck"])
 
@@ -26,8 +28,8 @@ const Question = ({toParent, submit, questionID, question, option1, option2, opt
                             setScore(score + 1)
                         }
                     })
-                .catch(function (error){
-                    console.log("ERROR!!!", error)
+                .catch(function (errorData){
+                    navigate(`/error/${errorData.error}`)
                 })            
         }}
 

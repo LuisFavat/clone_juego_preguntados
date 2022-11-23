@@ -9,7 +9,7 @@ const Error = () => {
     return(
     <div className="Error">
         <div className="Message">
-            <div>Something was wrong!!!:</div>
+            <div>Something was wrong!!!</div>
         {message}
         <NavButton url={"/"} tag={"Play again"}/>
         </div>

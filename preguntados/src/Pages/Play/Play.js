@@ -11,7 +11,7 @@ const Play = () => {
 
     
     //El estado es el siguiente: el indice 0 representa la lista de preguntas,
-    // el indice 1 representa si se cargaron las preguntas y el indice 2 el score del player. 
+    // el indice 1 representa si se cargaron las preguntas.
     const [questionsLoaded, setQuestionsLoaded] = useState([[],false])
     const [score, setScore] = useState(0)
 

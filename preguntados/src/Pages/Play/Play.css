@@ -1,16 +1,56 @@
 .playWrapper
 {
     position: relative;
-    background-color: blueviolet;
+    background-color:white;
     height: 100vh;
+}
+
+
+
+.Exit
+{
+    position: absolute;
+    margin-top: 4vh;
+    margin-left: 4vw;
+    background-color: red;
+    border-radius: 50%;
+    padding: 20px;
+    cursor: pointer;
+    border: 2px solid black;
+    color: aliceblue;
+    font-weight: 600;
+    font-size: larger;
+    transition: all .7s ease;
+}
+
+.Exit:hover
+{
+    font-size: xx-large;
 }
 
 .PlayQuestionWrapper
 {
     text-align: center;
-    background-color: aqua;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    border: 1px solid grey;
+    border-radius: 20px;
+    background-color: rgb(22, 117, 206);
 }
+
+.InfoQuestions
+{
+    margin-bottom: 1vh;
+    color: aliceblue;
+}
+
+@media screen and (max-width:780px){
+ 
+    .PlayQuestionWrapper
+    {
+        width: 92vw;
+    }
+    
+  }

@@ -22,6 +22,7 @@
 .ButtonAtHomeMetaWrapper
 {
   position: relative;
+  width: 100vw;
 }
 
 .ButtonAtHomeWrapper
@@ -31,6 +32,32 @@
   top: 50%;
   transform: translate(-50%, -50%);
   margin-top: 8vh;
-  width: 10vw;
+  width: 30vw;
 }
 
+
+@media screen and (max-width:780px){
+ 
+  .ButtonAtHomeWrapper
+  {
+      width: 80vw;
+  }
+  
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .PreguntadosImage {
+    animation: preguntados-spin infinite 20s linear;
+  }
+
+
+}
+
+@keyframes preguntados-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

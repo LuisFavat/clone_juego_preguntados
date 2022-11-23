@@ -3,7 +3,7 @@ import Api from "../../Api/preguntados"
 import "./Question.css"
 import Button from "../Button/Button"
 
-const Question = ({submit, questionID, question, option1, option2, option3, option4}) =>
+const Question = ({toParent, submit, questionID, question, option1, option2, option3, option4}) =>
 {
    
     const [questionsState, setQuestionsState] = useState(["unCheck", "unCheck", "unCheck", "unCheck"])
@@ -43,20 +43,21 @@ const Question = ({submit, questionID, question, option1, option2, option3, opti
         {
             submit()
             setQuestionsState(unCkeckState())
+            toParent(score)
         }
     }
 
     return(
         <div className="QuestionWrapper" >
-            <div>Correct aswers: {score} </div>
-            <div>{ question }</div>
+            <div className="InfoAnswer">Correct aswers: {score} </div>
+            <div className="Question">{ question }</div>
             <Option style={questionsState[0]} id={1}  aOption={option1}/>
             <Option style={questionsState[1]} id={2}  aOption={option2}/>
             <Option style={questionsState[2]} id={3}  aOption={option3}/>
             <Option style={questionsState[3]} id={4}  aOption={option4}/>
-            <div>
-                <Button action={ doOnClick } tag ={"Next question"}/>
-             </div>
+            <div className="QuestionButtonWrapper">
+                <Button action={ doOnClick } tag ={"Next"}/>
+            </div>
         </div>
     )
 }

@@ -10,12 +10,16 @@ import Button from "../../components/Button/Button";
 const Play = () => {
 
     
-
+    //El estado es el siguiente: el indice 0 representa la lista de preguntas,
+    // el indice 1 representa si se cargaron las preguntas y el indice 2 el score del player. 
     const [questionsLoaded, setQuestionsLoaded] = useState([[],false])
-    const [endPlay, setEndPlay] = useState(false)
+    const [score, setScore] = useState(0)
+
+    const getScoreFromChild = (aScore) => {
+        setScore(aScore)
+    }
 
     let {dificulty} = useParams()
-    console.log("a dificulty: ", dificulty)
 
     useEffect(() => {
         Api.getQuestions(dificulty)
@@ -30,24 +34,27 @@ const Play = () => {
     const navigate = useNavigate()
 
     const submitAnswer = () => {
-        console.log("cantidad de respuestas", questionsLoaded.at(0).length, "actual", actualQuestion)
        if(questionsLoaded.at(0).length !== actualQuestion + 1)
        {
             setActualQuestion(actualQuestion + 1)
        }
        else
        {
-            //navigate("/end")
+            navigate(`/end/${score}`)
        }
 
     }
 
+    const goToStart = () => {navigate("/")}
+
     return(
         <div className="playWrapper">
-            play
+            <div className="Exit" onClick={goToStart}>Exit</div>
             <div className="PlayQuestionWrapper">
+                <div className="InfoQuestions">Question number: {actualQuestion + 1} of {questionsLoaded.at(0).length}</div>
                 { questionsLoaded.at(1)?
                     <Question 
+                        toParent = {getScoreFromChild}
                         submit={submitAnswer}
                         questionID={ questionsLoaded.at(0)[actualQuestion].id }
                         question={ questionsLoaded.at(0)[actualQuestion].question } 

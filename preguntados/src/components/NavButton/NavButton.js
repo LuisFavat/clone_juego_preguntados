@@ -11,10 +11,11 @@ const NavButton = ({url, tag}) => {
 
     return(
       
-            <div className="ButtonWrapper">
-                <button className="Button" onClick={action}>{tag}</button>
+            <div className="MetaButtonWrapper">
+                <div className="ButtonWrapper">
+                    <button className="Button" onClick={action}>{tag}</button>
+                </div>
             </div>
-       
     )
 }
 

@@ -1,11 +1,22 @@
 .ButtonWrapper
 {
-    margin: 10px;
-    top: 50px;
+    margin: 1px;
+    top: 1%;
+    left: 50%;
+    transform: translate(-50%);
+    position: relative;
+    width: 30vw;
+    height: 10vh;
+    min-height: 60px;
 }
 
 .Button
 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
     font-size: 3vw;
     width: 100%;
     padding-left: 12px;
@@ -21,13 +32,27 @@
 
 .Button:hover
 {
-    background-color: rgb(196, 0, 0);
+    background-color: rgb(239, 255, 8);
     font-size: 4vw;
+    color: black;
 }
 
 @media screen and (max-width:780px){
  
     .Button{
-        font-size: xx-large;
+        font-size: 8vw;
     }
+
+    .ButtonWrapper
+{
+    width: 80vw;
+}
+
+.Button:hover
+{
+    font-size: 12vw;
+}
+
+
+
 }

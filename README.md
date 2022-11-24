@@ -15,15 +15,32 @@ Si no sabe si tiene instalado NodeJs simplemente escriba en un terminal: “node
 
 *También debe tener instalado un IDE. Si no tiene instalado Visual Studio Code puede descargarlo de aqui https://code.visualstudio.com/
 
+Instalacion
+
+Descargue la version que desea probar desde: https://github.com/LuisFavat/unq-ui-luis-favatier-trabajo-final/releases
+
+Descomprima el archivo. 
+Abra Visual Studio Code elija “open folder” vaya hasta la carpeta donde descomprimio el proyecto  y dentro de la carpeta “unq-ui-luis-favatier-trabajo-final-RealeseVx.x” (la version de la release puede variar)  abra la carpeta “preguntados”.
+Siga con el paso (# Instalando react-scripts)
+
+
+Opcionalmente descargue via git.
+
 Abra Visual Studio Code, haga click en Clone Git Repository… en el recuadro emergente pegue la siguiente url https://github.com/LuisFavat/unq-ui-luis-favatier-trabajo-final . Haga click en Clone.
 
 Una vez descargado el proyecto, del menu principal de Visual Studio Code haga click en Terminal => new Terminal
 
-En la terminal escriba: “npm install react-scripts” (si es que no lo tiene instalado. Excluya las comillas)
+Escriba en la termina: “cd preguntados”
+
+# Instalando react-scripts
+
+ Si no tiene un terminal abierto para usar vaya al menú principal de Visual Studio Code haga click en Terminal => new Terminal
+
+
+En la terminal escriba: “npm install react-scripts” ( Excluya las comillas)
 
 Al terminar la instalación escriba en la terminal: “npm start” (excluya las comillas). Espere unos segundos y se abrirá una nueva pestaña en su navegador por defecto con la url http://localhost:3000/ espere unos segundos más y se cargará el juego.
 
 Para jugar necesita conexión a internet.
 
 Ahora sí, a jugar!
-

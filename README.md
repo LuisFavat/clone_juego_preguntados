@@ -1,4 +1,4 @@
-# unq-ui-luis-favatier-trabajo-final
+# Clone-juego-preguntados
 Clone del juego de preguntados
 
 Para instalar el juego siga las siguientes instrucciones.

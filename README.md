@@ -15,6 +15,7 @@ Si no sabe si tiene instalado NodeJs simplemente escriba en un terminal: “node
 Instalacion
 
 Descargue la version que desea probar desde: https://github.com/LuisFavat/unq-ui-luis-favatier-trabajo-final/releases
+o https://github.com/LuisFavat/clone_juego_preguntados
 
 Descomprima el archivo. 
 Dentro de la carpeta “unq-ui-luis-favatier-trabajo-final-RealeseVx.x” (la version de la release puede variar)  abra la carpeta “preguntados”.
